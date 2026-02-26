@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earthworm - A Friend of Farmer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .action-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">🌾 Earthworm</div>
+      <div class="header-controls">
+        <button class="lang-toggle" title="Toggle Language">हिंदी</button>
+        <button class="voice-btn" title="Voice Input">🎤</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-emoji">🌾</div>
+      <div class="hero-title">Sahi Samay Pe Katai, Sahi Mandi Me Becho</div>
+      <div class="hero-subtitle">Harvest at right time, Sell at right market</div>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="card">
+      <div class="card-title">👋 नमस्ते Farmer!</div>
+      <p style="color: #666; line-height: 1.7;">
+        Welcome to Earthworm. We help you make smart decisions about when to harvest, where to sell, and how to keep your produce fresh.
+      </p>
+      <p style="color: #666; margin-top: 12px; line-height: 1.7;">
+        आपकी फसल को सही समय पर बेचने में मदद करने के लिए हम यहाँ हैं। कोई छिपी कीमत नहीं, सिर्फ सरल सलाह।
+      </p>
+    </div>
+
+    <!-- Main Action Buttons -->
+    <div class="action-buttons">
+      <a href="harvest.html" class="action-button">
+        <div class="button-emoji">🌾</div>
+        <div class="button-label">
+          <strong>Best Harvest Time</strong>
+          <div style="font-size: 13px; margin-top: 6px; opacity: 0.7;">जानें कब काटें</div>
+        </div>
+      </a>
+
+      <a href="market.html" class="action-button">
+        <div class="button-emoji">🏪</div>
+        <div class="button-label">
+          <strong>Find Best Market</strong>
+          <div style="font-size: 13px; margin-top: 6px; opacity: 0.7;">सर्वश्रेष्ठ मंडी खोजें</div>
+        </div>
+      </a>
+
+      <a href="spoilage.html" class="action-button">
+        <div class="button-emoji">🧊</div>
+        <div class="button-label">
+          <strong>Storage & Spoilage Help</strong>
+          <div style="font-size: 13px; margin-top: 6px; opacity: 0.7;">फसल को सुरक्षित रखें</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- How It Works -->
+    <div class="card" style="margin-top: 40px;">
+      <div class="card-title">❓ How Earthworm Works</div>
+      
+      <div style="display: grid; gap: 16px; margin-top: 16px;">
+        <div style="display: flex; gap: 12px;">
+          <div style="font-size: 28px; min-width: 50px;">📱</div>
+          <div>
+            <strong style="color: var(--primary-green);">Simple Questions</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 4px;">Just tell us your crop, when you planted, and your location</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px;">
+          <div style="font-size: 28px; min-width: 50px;">🔍</div>
+          <div>
+            <strong style="color: var(--primary-green);">Smart Analysis</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 4px;">We check weather, prices, distances, and market demand</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px;">
+          <div style="font-size: 28px; min-width: 50px;">💡</div>
+          <div>
+            <strong style="color: var(--primary-green);">Clear Advice</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 4px;">We explain WHY each recommendation - no hidden algorithms</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px;">
+          <div style="font-size: 28px; min-width: 50px;">✅</div>
+          <div>
+            <strong style="color: var(--primary-green);">Transparent Data</strong>
+            <p style="font-size: 14px; color: #666; margin-top: 4px;">See exactly which data sources we're using and confidence levels</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Features -->
+    <div class="card" style="border-left-color: var(--earth-brown);">
+      <div class="card-title">🤝 Why Trust Earthworm?</div>
+      
+      <ul style="list-style: none; margin-top: 12px;">
+        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+          <strong>✓ Free Forever</strong> - No hidden charges, no premium features
+        </li>
+        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+          <strong>✓ Works Offline</strong> - Demo data works without internet
+        </li>
+        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+          <strong>✓ Simple Language</strong> - No technical jargon, Hindi support
+        </li>
+        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+          <strong>✓ Voice Option</strong> - Use voice input if typing is hard
+        </li>
+        <li>
+          <strong>✓ Your Data is Safe</strong> - Nothing is sent to servers, all kept private
+        </li>
+      </ul>
+    </div>
+
+    <!-- Current Weather & Market -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; margin-bottom: 40px;">
+      <div class="card" style="padding: 16px;">
+        <div style="text-align: center;">
+          <div style="font-size: 32px;">🌦️</div>
+          <div style="font-weight: bold; color: var(--primary-green); margin-top: 8px;">Today's Weather</div>
+          <p style="font-size: 13px; color: #666; margin-top: 8px;">
+            28°C, Partly Cloudy<br>
+            Wind: 12 km/h
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 16px;">
+        <div style="text-align: center;">
+          <div style="font-size: 32px;">📈</div>
+          <div style="font-weight: bold; color: var(--primary-green); margin-top: 8px;">Market Updates</div>
+          <p style="font-size: 13px; color: #666; margin-top: 8px;">
+            Wheat: Down 5%<br>
+            Tomato: Up 15%
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

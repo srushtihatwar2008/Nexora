@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Advice - Earthworm</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">🌾 Earthworm</div>
+      <div class="header-controls">
+        <button class="lang-toggle" title="Toggle Language">हिंदी</button>
+        <button class="voice-btn" title="Voice Input">🎤</button>
+      </div>
+    </div>
+    <div class="breadcrumb">
+      Home > Harvest Advice
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">🌾 Best Time to Harvest</h1>
+    <p class="subtitle">Tell us about your crop and we'll tell you the perfect harvest window</p>
+
+    <!-- Input Form -->
+    <div class="card" id="form-card">
+      <form id="harvest-form">
+        <div class="form-group">
+          <label for="crop">🌾 Select Your Crop *</label>
+          <select id="crop" required>
+            <option value="">— Choose Crop —</option>
+            <option value="wheat">गेहूं / Wheat</option>
+            <option value="rice">धान / Rice</option>
+            <option value="cotton">कपास / Cotton</option>
+            <option value="sugarcane">गन्ना / Sugarcane</option>
+            <option value="potato">आलू / Potato</option>
+            <option value="onion">प्याज / Onion</option>
+            <option value="tomato">टमाटर / Tomato</option>
+            <option value="soybean">सोयाबीन / Soybean</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sowing-date">📅 When Did You Plant? (Sowing Date) *</label>
+          <input type="date" id="sowing-date" required>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 If you don't remember exact date, use an approximate date
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="location">📍 Your Location *</label>
+          <input type="text" id="location" placeholder="e.g., Delhi, Maharashtra, Punjab" required>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 We use location to get accurate weather & market data
+          </small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Get Harvest Advice ✓
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Container -->
+    <div id="advice-container" style="display: none;"></div>
+
+    <!-- Example Section -->
+    <div class="card" style="margin-top: 30px; background: #f0f8e8; border-left-color: var(--accent-green);">
+      <div class="card-title" style="color: var(--accent-green);">📝 Example: Wheat Harvest</div>
+      <p style="color: #666; margin-bottom: 12px;">
+        If you planted wheat on <strong>Oct 15, 2025</strong>, the optimal harvest time would be around <strong>March 25, 2026</strong> (165 days later).
+      </p>
+      <p style="color: #666; margin-bottom: 12px;">
+        Why? Because wheat needs 160-180 days to mature, and March-April weather is perfect for harvest in North India - dry, cool, no rain.
+      </p>
+      <p style="color: #666;">
+        💡 You can harvest anytime between March 15 - April 15, but March 25 gives you the highest yield and best price.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card" style="margin-top: 30px;">
+      <div class="card-title">❓ Common Questions</div>
+
+      <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #eee;">
+        <strong style="color: var(--primary-green); cursor: pointer;" onclick="toggleExpand(this.nextElementSibling)">
+          Can I harvest earlier to sell at higher prices?
+        </strong>
+        <div style="display: none; margin-top: 10px; color: #666; font-size: 14px;">
+          <p>
+            Early harvest means lower yield and poor quality. The grain will be soft, wet, and more prone to spoilage. 
+            Even if prices are high, losses will be more than gains.
+          </p>
+          <p style="margin-top: 10px;">
+            Better strategy: Harvest at optimal time, then store smartly and sell when prices are better.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #eee;">
+        <strong style="color: var(--primary-green); cursor: pointer;" onclick="toggleExpand(this.nextElementSibling)">
+          What if monsoon comes before harvest?
+        </strong>
+        <div style="display: none; margin-top: 10px; color: #666; font-size: 14px;">
+          <p>
+            This is a real risk in some years. Earthworm checks the 3-month forecast and will warn you if heavy rain is expected.
+          </p>
+          <p style="margin-top: 10px;">
+            If rain comes: Harvest immediately (even if slightly early) rather than lose the whole crop to rot and fungal diseases.
+          </p>
+        </div>
+      </div>
+
+      <div style="padding-bottom: 0;">
+        <strong style="color: var(--primary-green); cursor: pointer;" onclick="toggleExpand(this.nextElementSibling)">
+          How accurate is the harvest date advice?
+        </strong>
+        <div style="display: none; margin-top: 10px; color: #666; font-size: 14px;">
+          <p>
+            Our system checks weather forecasts, historical data, and your location. The advice is typically ±5 days accurate.
+          </p>
+          <p style="margin-top: 10px;">
+            We show you the "optimal window" (10-15 days) to account for daily variations. You harvest when the crop looks ready AND the date is in the window.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Link -->
+    <button class="btn btn-back" onclick="window.location.href='index.html'" style="margin-top: 30px; display: block;">
+      ← Back to Home
+    </button>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Market - Earthworm</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">🏪 Earthworm</div>
+      <div class="header-controls">
+        <button class="lang-toggle" title="Toggle Language">हिंदी</button>
+        <button class="voice-btn" title="Voice Input">🎤</button>
+      </div>
+    </div>
+    <div class="breadcrumb">
+      Home > Best Market
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">🏪 Find Your Best Market</h1>
+    <p class="subtitle">We compare mandis by price, distance, and actual profit for you</p>
+
+    <!-- Input Form -->
+    <div class="card" id="form-card">
+      <form id="market-form">
+        <div class="form-group">
+          <label for="market-crop">🌾 Select Your Crop *</label>
+          <select id="market-crop" required>
+            <option value="">— Choose Crop —</option>
+            <option value="wheat">गेहूं / Wheat</option>
+            <option value="rice">धान / Rice</option>
+            <option value="cotton">कपास / Cotton</option>
+            <option value="sugarcane">गन्ना / Sugarcane</option>
+            <option value="potato">आलू / Potato</option>
+            <option value="onion">प्याज / Onion</option>
+            <option value="tomato">टमाटर / Tomato</option>
+            <option value="soybean">सोयाबीन / Soybean</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="market-location">📍 Your Location *</label>
+          <input type="text" id="market-location" placeholder="e.g., Delhi, Maharashtra, Punjab" required>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 Helps us find nearby mandis and calculate real transport costs
+          </small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Find Best Markets ✓
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Container -->
+    <div id="market-container" style="display: none;"></div>
+
+    <!-- Information Cards -->
+    <div class="card" style="margin-top: 30px; background: #f0f8e8; border-left-color: var(--accent-green);">
+      <div class="card-title" style="color: var(--accent-green);">💡 What Do These Numbers Mean?</div>
+      
+      <div style="display: grid; gap: 12px; margin-top: 12px;">
+        <div>
+          <strong style="color: var(--primary-green);">Price per Unit (₹)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            What the mandi is offering for your crop today
+          </p>
+        </div>
+        
+        <div>
+          <strong style="color: var(--primary-green);">Distance (km)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            How far the mandi is from you. Closer mandis = less spoilage, lower cost
+          </p>
+        </div>
+
+        <div>
+          <strong style="color: var(--primary-green);">Transport Time</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            How long to reach the mandi. Shorter time = fresher produce = better price
+          </p>
+        </div>
+
+        <div>
+          <strong style="color: var(--primary-green);">Transport Cost (₹)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Truck/vehicle cost to reach this mandi
+          </p>
+        </div>
+
+        <div>
+          <strong style="color: var(--primary-green);">Net Profit</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            <strong>This is what matters!</strong> = Price - Transport Cost - Spoilage Loss
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Distance Matters -->
+    <div class="card" style="margin-top: 20px;">
+      <div class="card-title">📍 Why Does Distance Matter So Much?</div>
+      
+      <p style="color: #666; margin-bottom: 12px;">
+        Imagine two mandis offering the same base price:
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 12px;">
+        <div style="background: #fff3cd; padding: 12px; border-radius: 8px;">
+          <strong>❌ Mandi 100 km Away</strong>
+          <p style="font-size: 13px; margin-top: 8px;">
+            Transport: ₹1500<br>
+            Spoilage: 15%<br>
+            Final: Low profit
+          </p>
+        </div>
+        
+        <div style="background: #d4edda; padding: 12px; border-radius: 8px;">
+          <strong>✅ Mandi 10 km Away</strong>
+          <p style="font-size: 13px; margin-top: 8px;">
+            Transport: ₹150<br>
+            Spoilage: 2%<br>
+            Final: High profit
+          </p>
+        </div>
+      </div>
+
+      <p style="color: #666;">
+        💡 Closer mandi = Less cost + Fresher produce (less spoilage) = More money in your pocket
+      </p>
+    </div>
+
+    <!-- Real Example -->
+    <div class="card" style="margin-top: 20px; border-left-color: var(--earth-brown);">
+      <div class="card-title">📐 Real Calculation: Tomato Example</div>
+      
+      <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+        <tr style="background: #f0f8e8;">
+          <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>Mandi A</strong></td>
+          <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: right;"><strong>Mandi B</strong></td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border-bottom: 1px solid #eee;">Base Price: ₹2500/10kg</td>
+          <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: right;">₹2500/10kg</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border-bottom: 1px solid #eee;">Distance: 50 km</td>
+          <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: right;">5 km</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border-bottom: 1px solid #eee;">Transport Cost: -₹500</td>
+          <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: right;">-₹50</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border-bottom: 1px solid #eee;">Spoilage Loss: -₹250 (10%)</td>
+          <td style="padding: 8px; border-bottom: 1px solid #eee; text-align: right;">-₹50 (2%)</td>
+        </tr>
+        <tr style="background: #e8f5e9; font-weight: bold;">
+          <td style="padding: 8px; border-bottom: 1px solid #ddd;">Net: ₹1750</td>
+          <td style="padding: 8px; border-bottom: 1px solid #ddd; text-align: right;">Net: ₹2400</td>
+        </tr>
+      </table>
+
+      <p style="margin-top: 12px; color: #666;">
+        Even though both pay ₹2500, Mandi B gives you ₹650 more per batch because it's closer!
+      </p>
+    </div>
+
+    <!-- Back Link -->
+    <button class="btn btn-back" onclick="window.location.href='index.html'" style="margin-top: 30px; display: block;">
+      ← Back to Home
+    </button>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

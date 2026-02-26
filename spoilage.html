@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage & Spoilage - Earthworm</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">🧊 Earthworm</div>
+      <div class="header-controls">
+        <button class="lang-toggle" title="Toggle Language">हिंदी</button>
+        <button class="voice-btn" title="Voice Input">🎤</button>
+      </div>
+    </div>
+    <div class="breadcrumb">
+      Home > Storage Help
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">🧊 Spoilage Risk & Storage Tips</h1>
+    <p class="subtitle">Prevent losses with smart storage and smart transport</p>
+
+    <!-- Input Form -->
+    <div class="card" id="form-card">
+      <form id="spoilage-form">
+        <div class="form-group">
+          <label for="storage-type">📦 Where Will You Store? *</label>
+          <select id="storage-type" required>
+            <option value="">— Choose Storage —</option>
+            <option value="field">खेत में / Field Storage</option>
+            <option value="home">घर में / Home Storage</option>
+            <option value="warehouse">गोदाम / Warehouse</option>
+            <option value="coldStorage">कोल्ड स्टोरेज / Cold Storage</option>
+          </select>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 Choose where you plan to store the produce
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="transport-time">🕐 Expected Travel Time to Market *</label>
+          <input type="number" id="transport-time" placeholder="Hours" min="0" max="48" step="0.5" required>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 How many hours to reach the mandi from your field/store?
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="temperature">🌡️ Expected Temperature During Storage *</label>
+          <input type="number" id="temperature" placeholder="°C" min="-10" max="50" required>
+          <small style="color: #999; margin-top: 6px; display: block;">
+            💡 Average temperature where you'll keep the produce (today's temp as reference)
+          </small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Analyze Spoilage Risk ✓
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Container -->
+    <div id="spoilage-container" style="display: none;"></div>
+
+    <!-- Information Section -->
+    <div class="card" style="margin-top: 30px;">
+      <div class="card-title">🔬 How Spoilage Happens?</div>
+      <div style="margin-top: 12px;">
+        <p style="color: #666; margin-bottom: 12px;">
+          <strong>1️ Microbes.</strong> Bacteria, fungi thrive in warm, moist places. Higher temperature = faster multiplication.
+        </p>
+        <p style="color: #666; margin-bottom: 12px;">
+          <strong>2️ Enzymes.</strong> Ripening enzymes speed up decomposition. Cold slows them down.
+        </p>
+        <p style="color: #666; margin-bottom: 12px;">
+          <strong>3️ Moisture.</strong> Too much moisture causes mold. Too little causes withering.
+        </p>
+        <p style="color: #666;">
+          <strong>4️ Time.</strong> Every hour in transit increases risk. Night transport (cooler) significantly reduces it.
+        </p>
+      </div>
+    </div>
+
+    <!-- Temperature Guide -->
+    <div class="card" style="margin-top: 20px; background: #eff5ff; border-left-color: #4a90e2;">
+      <div class="card-title" style="color: #004085;">🌡️ Temperature Impact Guide</div>
+      
+      <div style="margin-top: 12px;">
+        <div style="background: white; padding: 12px; border-radius: 6px; margin-bottom: 10px; border-left: 4px solid #27ae60;">
+          <strong style="color: #27ae60;">0-10°C (Cold/Fridge)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Best for storage. Microbes slow down. Risk: Only 5-10%. Problem: Chill damage in some crops.
+          </p>
+        </div>
+
+        <div style="background: white; padding: 12px; border-radius: 6px; margin-bottom: 10px; border-left: 4px solid #f5b041;">
+          <strong style="color: #f5b041;">10-25°C (Room Temperature)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Moderate risk. 20-30% spoilage. Good microbe control with ventilation.
+          </p>
+        </div>
+
+        <div style="background: white; padding: 12px; border-radius: 6px; border-left: 4px solid #d84a4a;">
+          <strong style="color: #d84a4a;">25-30°C (Warm)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            High risk. Microbes multiply. 30-40% spoilage likely. Need active cooling.
+          </p>
+        </div>
+
+        <div style="background: white; padding: 12px; border-radius: 6px; margin-top: 10px; border-left: 4px solid #d84a4a;">
+          <strong style="color: #d84a4a;">&gt;30°C (Very Hot)</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Severe risk. 40-60% loss in first day. Must use cold storage or transport early morning/night.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart Tips -->
+    <div class="card" style="margin-top: 20px;">
+      <div class="card-title">💡 Smart Storage Tips</div>
+      
+      <div style="display: grid; gap: 12px; margin-top: 12px;">
+        <div style="background: #f0f8e8; padding: 12px; border-radius: 8px;">
+          <strong style="color: var(--primary-green);">✓ Keep It Dry</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Wet stored produce rots within 2-3 days. Dry them properly before storing.
+          </p>
+        </div>
+
+        <div style="background: #f0f8e8; padding: 12px; border-radius: 8px;">
+          <strong style="color: var(--primary-green);">✓ Keep It Cool</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Every degree cooler = several days longer shelf life. Use shade, ventilation, wet burlap.
+          </p>
+        </div>
+
+        <div style="background: #f0f8e8; padding: 12px; border-radius: 8px;">
+          <strong style="color: var(--primary-green);">✓ Keep It Moving</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Even 1-2 days of storage increases risk. Sell quickly. Don't wait for higher prices.
+          </p>
+        </div>
+
+        <div style="background: #f0f8e8; padding: 12px; border-radius: 8px;">
+          <strong style="color: var(--primary-green);">✓ Keep It Ventilated</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Air gaps prevent moisture buildup and mold. Never stack airtight containers.
+          </p>
+        </div>
+
+        <div style="background: #f0f8e8; padding: 12px; border-radius: 8px;">
+          <strong style="color: var(--primary-green);">✓ Keep It Sorted</strong>
+          <p style="font-size: 13px; color: #666; margin-top: 4px;">
+            Remove bruised/rotten items immediately. They spread infection to neighbors fast.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cost vs Benefit -->
+    <div class="card" style="margin-top: 20px; border-left-color: var(--earth-brown);">
+      <div class="card-title">💰 When Is Storage Worth It?</div>
+      
+      <p style="color: #666; margin-bottom: 12px;">
+        <strong>Don't store if:</strong> Prices are already high now. Sell immediately even if storage is available.
+      </p>
+
+      <p style="color: #666; margin-bottom: 12px;">
+        <strong>Store if:</strong> Prices will be 20%+ higher in 1-2 weeks AND spoilage risk is low.
+      </p>
+
+      <div style="background: #fff3cd; padding: 12px; border-radius: 8px; margin-top: 12px;">
+        <strong style="color: var(--text-dark);">Example Calculation:</strong>
+        <p style="font-size: 13px; color: #666; margin-top: 8px;">
+          Current price: ₹2000/bag<br>
+          Expected price after 5 days: ₹2400/bag<br>
+          Storage cost: ₹50<br>
+          Spoilage loss: 10% (₹200)<br>
+          <br>
+          Net benefit: ₹2400 - ₹200 - ₹50 = ₹2150 vs ₹2000 = <strong>+₹150 profit</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Back Link -->
+    <button class="btn btn-back" onclick="window.location.href='index.html'" style="margin-top: 30px; display: block;">
+      ← Back to Home
+    </button>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

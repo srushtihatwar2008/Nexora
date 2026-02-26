@@ -1,0 +1,800 @@
+/* ==========================================
+   AgriChain - Rural Friendly Theme
+   Soft Green + Earthy Brown Palette
+   ========================================== */
+
+:root {
+  --primary-green: #2d5016;
+  --light-green: #4a7c2f;
+  --accent-green: #89c540;
+  --earth-brown: #8b6f47;
+  --light-brown: #d4c4b0;
+  --danger-red: #d84a4a;
+  --warning-yellow: #f5b041;
+  --success-green: #27ae60;
+  --text-dark: #2c3e50;
+  --text-light: #ecf0f1;
+  --bg-light: #f9f8f3;
+  --border-color: #bdc3c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+/* ==========================================
+   Header & Navigation
+   ========================================== */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+  color: white;
+  padding: 15px 20px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-toggle {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.voice-btn {
+  background: var(--accent-green);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-btn:hover {
+  background: var(--light-green);
+  transform: scale(1.1);
+}
+
+.breadcrumb {
+  font-size: 13px;
+  opacity: 0.9;
+  display: flex;
+  gap: 8px;
+}
+
+/* ==========================================
+   Main Content
+   ========================================== */
+
+main {
+  max-width: 600px;
+  margin: 80px auto 0;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   Home Page Hero
+   ========================================== */
+
+.hero-section {
+  background: linear-gradient(135deg, var(--accent-green), var(--light-green));
+  color: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-emoji {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ==========================================
+   Large Action Buttons
+   ========================================== */
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+  background: white;
+  border: 2px solid var(--light-green);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 150px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.action-button:hover {
+  border-color: var(--accent-green);
+  background: #f0f8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+.button-emoji {
+  font-size: 45px;
+}
+
+.button-label {
+  text-align: center;
+}
+
+/* ==========================================
+   Forms & Input
+   ========================================== */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-green);
+  font-size: 16px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(137, 197, 64, 0.1);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%232d5016' d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+/* ==========================================
+   Buttons
+   ========================================== */
+
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--light-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 112, 22, 0.3);
+}
+
+.btn-secondary {
+  background: var(--light-brown);
+  color: white;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: var(--earth-brown);
+}
+
+.btn-small {
+  padding: 10px 20px;
+  font-size: 14px;
+  width: auto;
+}
+
+.btn-back {
+  background: transparent;
+  color: var(--accent-green);
+  border: 2px solid var(--accent-green);
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background: var(--accent-green);
+  color: white;
+}
+
+/* ==========================================
+   Flex Layout
+   ========================================== */
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.button-row .btn {
+  margin: 0;
+  width: 100%;
+}
+
+/* ==========================================
+   Info Cards
+   ========================================== */
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--accent-green);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+   Risk Indicators
+   ========================================== */
+
+.risk-indicator {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.risk-safe {
+  background: #e8f5e9;
+  color: var(--success-green);
+  border: 1px solid var(--success-green);
+}
+
+.risk-moderate {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid var(--warning-yellow);
+}
+
+.risk-high {
+  background: #f8d7da;
+  color: var(--danger-red);
+  border: 1px solid var(--danger-red);
+}
+
+/* ==========================================
+   Stats & Data Display
+   ========================================== */
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.stat-subtext {
+  font-size: 13px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   Comparison & Rankings
+   ========================================== */
+
+.comparison-item {
+  background: #f9f8f3;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 15px;
+}
+
+.comparison-item.highlight {
+  border-color: var(--accent-green);
+  background: #f0f8e8;
+  border-width: 2px;
+}
+
+.rank-badge {
+  display: inline-block;
+  background: var(--accent-green);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+
+.cost-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px;
+}
+
+.cost-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.cost-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.cost-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.impact-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px;
+  background: #e7f3ff;
+  color: #004085;
+}
+
+/* ==========================================
+   Explainability Panel
+   ========================================== */
+
+.explainability-panel {
+  background: linear-gradient(135deg, #f0f8e8, #fff3cd);
+  border: 2px solid var(--accent-green);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.explainability-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 12px;
+}
+
+.explainability-header:hover {
+  color: var(--accent-green);
+}
+
+.explainability-toggle {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.explainability-toggle.open {
+  transform: rotate(180deg);
+}
+
+.explainability-content {
+  display: none;
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.explainability-content.open {
+  display: block;
+}
+
+.data-source {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border-left: 3px solid var(--earth-brown);
+  font-size: 13px;
+}
+
+.data-source-title {
+  font-weight: 600;
+  color: var(--earth-brown);
+  margin-bottom: 6px;
+}
+
+.confidence-display {
+  display: inline-block;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.confidence-high {
+  color: var(--success-green);
+  border: 2px solid var(--success-green);
+}
+
+.confidence-medium {
+  color: var(--warning-yellow);
+  border: 2px solid var(--warning-yellow);
+}
+
+.confidence-low {
+  color: var(--danger-red);
+  border: 2px solid var(--danger-red);
+}
+
+/* ==========================================
+   Market Comparison
+   ========================================== */
+
+.market-item {
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+}
+
+.market-item.best {
+  border-color: var(--accent-green);
+  background: #f0f8e8;
+  border-width: 3px;
+}
+
+.market-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.market-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.details-item {
+  font-size: 14px;
+}
+
+.details-label {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.details-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.profit-highlight {
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--success-green);
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ==========================================
+   Storage Suggestions
+   ========================================== */
+
+.suggestion-item {
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+.suggestion-item:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.suggestion-ranking {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-green);
+}
+
+.suggestion-title {
+  font-weight: bold;
+  color: var(--primary-green);
+  font-size: 16px;
+  flex: 1;
+}
+
+.suggestion-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.suggestion-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   Weather & Trends
+   ========================================== */
+
+.weather-box {
+  background: linear-gradient(135deg, #87ceeb, #4a90e2);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.weather-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.trend-arrow {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 8px;
+}
+
+.trend-up {
+  color: var(--danger-red);
+}
+
+.trend-down {
+  color: var(--success-green);
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 480px) {
+  header {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .hero-emoji {
+    font-size: 40px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .button-emoji {
+    font-size: 35px;
+  }
+
+  .action-button {
+    padding: 25px 15px;
+    min-height: 130px;
+  }
+
+  main {
+    padding: 15px;
+    margin-top: 70px;
+  }
+
+  .market-details {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row .btn {
+    padding: 12px 20px;
+  }
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+
+@media print {
+  header {
+    position: static;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .explainability-toggle,
+  .btn {
+    display: none;
+  }
+}
